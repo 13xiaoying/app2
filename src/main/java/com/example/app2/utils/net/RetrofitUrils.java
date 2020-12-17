@@ -26,6 +26,16 @@ public class RetrofitUrils implements INetWorkInterface {
                 .build();
         apiServer = build.create(ApiServer.class);
     }
+    public static RetrofitUrils getInstance(){
+        if(retrofitUrils==null){
+            synchronized (RetrofitUrils.class){
+                if(retrofitUrils==null){
+                    retrofitUrils=new RetrofitUrils();
+                }
+            }
+        }
+        return retrofitUrils;
+    }
 
     @Override
     public <T> void get(String url, final INetWorkCallBack<T> callBack) {
