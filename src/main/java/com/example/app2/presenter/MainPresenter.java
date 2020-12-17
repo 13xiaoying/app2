@@ -15,7 +15,6 @@ public class MainPresenter extends BasePresenter<MainContract.MainView> implemen
 
     public MainPresenter(MainContract.MainView mainView) {
         this.mainModel = new MainModel(this);
-        //iView=mainView;
     }
 
     @Override

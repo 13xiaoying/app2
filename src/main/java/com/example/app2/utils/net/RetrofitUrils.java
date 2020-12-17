@@ -16,8 +16,8 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 public class RetrofitUrils implements INetWorkInterface {
-    private static RetrofitUrils retrofitUrils;
-    private final ApiServer apiServer;
+    public static RetrofitUrils retrofitUrils;
+    public final ApiServer apiServer;
 
     public RetrofitUrils() {
         Retrofit build = new Retrofit.Builder()

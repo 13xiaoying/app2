@@ -5,7 +5,7 @@ import com.example.app2.utils.net.INetWorkCallBack;
 import com.example.app2.utils.net.RetrofitUrils;
 
 public class MainModel implements MainContract.MainModel {
-    private MainContract.MainPresenter presenter;
+    public MainContract.MainPresenter presenter;
 
     public MainModel(MainContract.MainPresenter presenter) {
         this.presenter = presenter;

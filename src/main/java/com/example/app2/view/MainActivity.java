@@ -20,9 +20,9 @@ import java.util.List;
 
 public class MainActivity extends BaseMainActivity<MainPresenter> implements MainContract.MainView {
 
-    private RecyclerView mViewRv;
-    private ArrayList<ProBean.ResultsBean> list;
-    private HomeMadapter madapter;
+    public RecyclerView mViewRv;
+    public ArrayList<ProBean.ResultsBean> list;
+    public HomeMadapter madapter;
 
     @Override
     public void initView() {
@@ -37,7 +37,7 @@ public class MainActivity extends BaseMainActivity<MainPresenter> implements Mai
 
     @Override
     public void initDate() {
-        getInterface().fun();
+        paresent.fun();
     }
 
     @Override
