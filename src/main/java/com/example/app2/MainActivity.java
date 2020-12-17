@@ -5,12 +5,15 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.app2.base.BaseMainActivity;
+import com.example.app2.bean.ProBean;
+
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     private RecyclerView mViewRv;
-    private ArrayList<Object> list;
+    private ArrayList<ProBean.ResultsBean> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
