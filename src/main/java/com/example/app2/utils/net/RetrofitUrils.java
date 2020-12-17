@@ -39,7 +39,7 @@ public class RetrofitUrils implements INetWorkInterface {
 
     @Override
     public <T> void get(String url, final INetWorkCallBack<T> callBack) {
-        apiServer.get()
+        apiServer.get(url)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<ResponseBody>() {

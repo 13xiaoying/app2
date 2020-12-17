@@ -25,13 +25,6 @@ public class MainActivity extends BaseMainActivity<MainPresenter> implements Mai
     private HomeMadapter madapter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        initView();
-    }
-
-    @Override
     public void initView() {
         mViewRv = (RecyclerView) findViewById(R.id.rv_view);
         list = new ArrayList<>();
@@ -44,7 +37,7 @@ public class MainActivity extends BaseMainActivity<MainPresenter> implements Mai
 
     @Override
     public void initDate() {
-
+        getInterface().fun();
     }
 
     @Override

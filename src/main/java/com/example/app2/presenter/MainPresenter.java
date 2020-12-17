@@ -8,11 +8,14 @@ import com.example.app2.model.MainModel;
 import com.example.app2.utils.net.INetWorkCallBack;
 import com.example.app2.utils.net.URLContstant;
 
+import java.util.List;
+
 public class MainPresenter extends BasePresenter<MainContract.MainView> implements MainContract.MainPresenter {
-    private final MainModel mainModel;
+    public final MainModel mainModel;
 
     public MainPresenter(MainContract.MainView mainView) {
         this.mainModel = new MainModel(this);
+        //iView=mainView;
     }
 
     @Override
@@ -20,6 +23,7 @@ public class MainPresenter extends BasePresenter<MainContract.MainView> implemen
         mainModel.getDate(URLContstant.url, new INetWorkCallBack<ProBean>() {
             @Override
             public void onInit(ProBean a) {
+                List<ProBean.ResultsBean> results = a.getResults();
                 iView.onInit(a);
             }
 
