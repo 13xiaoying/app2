@@ -1,5 +1,6 @@
 package com.example.app2.contract;
 
+import com.example.app2.base.BaseView;
 import com.example.app2.bean.ProBean;
 import com.example.app2.utils.net.INetWorkCallBack;
 
@@ -10,7 +11,7 @@ public class MainContract {
     public interface MainPresenter{
         void fun();
     }
-    public interface MainView{
+    public interface MainView extends BaseView {
         void onInit(ProBean proBean);
         void onError(String Error);
     }

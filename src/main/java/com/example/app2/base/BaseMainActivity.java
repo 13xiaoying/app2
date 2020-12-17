@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public abstract class BaseMainActivity<T> extends AppCompatActivity {
+public abstract class BaseMainActivity<T extends BasePresenter> extends AppCompatActivity implements BaseView{
     public T paresent;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -13,6 +13,7 @@ public abstract class BaseMainActivity<T> extends AppCompatActivity {
         setContentView(getIcount());
         if(paresent==null){
             paresent=getInterface();
+            paresent.attachView(this);
         }
         initView();
         initDate();
